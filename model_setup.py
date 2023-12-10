@@ -5,9 +5,10 @@ import shutil
 from pathlib import Path
 from glob import glob
 
-
-other_models = os.path.join(os.path.expanduser("~"), "openvino-ai-plugins-gimp", "weights")
-src_dir = os.path.join("openvino-ai-plugins-gimp", "weights")
+user_path="~/openvino-ai-plugins-gimp/weights"
+local_path=os.getcwd()
+other_models = os.path.join(os.path.expanduser(user_path))
+src_dir = os.path.join(local_path, "weights")
 test_path = os.path.join(other_models, "superresolution-ov")
 
 access_token  = None
